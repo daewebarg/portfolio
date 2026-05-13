@@ -1,208 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Daniela Piva</title>
-
-
-    <link rel="stylesheet" href="./styles/styles.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
+    <title>PixelCraft Studio | Diseño Web Moderno</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <header>
-        <div class="divlogo">
-            <img class="logoheader" src="./dp.svg" alt="">
+
+    <!-- Navbar -->
+    <nav class="navbar-container">
+        <div class="navbar-content">
+            <div class="logo">
+                <span class="icon">🚀</span> PixelCraft
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#porque">Elegirnos</a></li>
+                <li><a href="#trabajos">Trabajos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        
-
-<nav class="nav-glass-container">
-  <div class="gooey-layer">
-    <div class="knob" id="knob"></div>
-  </div>
-
-  <ul class="nav-main">
-
-
-    <a href="#servicios"><li class="nav-item active" onclick="moveKnob(this, 0)">Servicios</li></a>
-    <a href="#clientes"><li class="nav-item" onclick="moveKnob(this, 1)">Portfolio</li></a>
-  </ul>
-</nav>
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-    </filter>
-  </defs>
-</svg>
-
-
-<button class="buttonheader"><a class="aheader" href="https://w.app/jbt49z">Contacto</a></button>
-
-    </header>
-
+    </nav>
 
     <main>
-
-        <article>
-            <div class="masking-container">
-                <h1 class="masked-text">Páginas web auténticas para marcas únicas
-                </h1>
-                <h2 class="masked-text" style="font-size: 25px; width: 80%; margin-left: 10%;">Diseño con propósito. Creamos plataformas robustas que impulsan el crecimiento de tu marca y maximizan tus resultados.
-                </h2>
+        <!-- Sección Nosotros -->
+        <section id="nosotros" class="section-nosotros">
+            <div class="container">
+                <div class="nosotros-grid">
+                    <div class="nosotros-text">
+                        <span class="badge">Sobre Nosotros</span>
+                        <h1>Transformamos ideas en experiencias <span>digitales impactantes</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <button class="btn-primary-simple">Saber más</button>
+                    </div>
+                    <div class="nosotros-img">
+                        <img src="https://illustrations.popsy.co/white/team-success.svg" alt="Equipo">
+                    </div>
+                </div>
             </div>
-        </article>
-        <article id="servicios" class="Servicios">
-            <h1 class="h1servicios">Elegí el sitio ideal</h1>
-            <div class="contenedorservicio">
-                <div class="nombredelservicio">
-                    <div style="display: flex;">
-                        <img class="svgcards" src="./svglanding.svg" alt="">
-                        <h2 style="text-decoration: underline;">Landing Page</h2>
-                    </div>
-                    <p class="pservicios">Ideal para campañas de marketing, landing page que convierte visitantes en clientes potenciales con diseño cautivador y contenido optimizado para la conversión.</p>
-                    <button class="button-30"><a href="https://w.app/jbt49z">Contacto</a></button>
-                </div>
-                <div class="tiempos">
-                    <div class="contenedortiempos">
-                        <img class="svgcards" src="./svgcronometro.svg" alt="">
-                        <h2>Tiempos</h2>
-                    </div>
-                    <p class="pservicios">Según la complejidad del proyecto, normalmente de 1 a 3 semanas.</p>
-                </div>
-                <div class="incluye">
-                    <div class="contenedorincluye">
-                        <img class="svgcards" src="./svgcontenido.svg" alt="">
-                        <h2>¿Que incluye?</h2>
-                    </div>
-                    <p class="pservicios">Analisis de competencia, certificado SSL y más.</p>
-                </div>
-                
+        </section>
 
+        <!-- Sección Por Qué Elegirnos -->
+        <section id="porque" class="section-porque">
+            <div class="container">
+                <div class="section-header">
+                    <h2>¿Por Qué Elegirnos?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="f-icon">🎨</div>
+                        <h3>Diseño Exclusivo</h3>
+                        <p>Diseños únicos adaptados a la identidad de tu marca.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon">⚡</div>
+                        <h3>Optimización</h3>
+                        <p>Webs rápidas y preparadas para posicionarse.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Tu sitio se verá impecable en cualquier dispositivo.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="contenedorservicio">
-                <div class="nombredelservicio">
-                    <div style="display: flex;">
-                        <img class="svgcards" src="/svgmovie.svg" alt="">
-                        <h2 style="text-decoration: underline;">Edición de fotos y videos</h2>
-                    </div>
-                    <p class="pservicios">Creación de reels, placas, videos formato 16:9,9:16</p>
-                    <button class="button-30"><a href="https://w.app/jbt49z">Contacto</a></button>
+        <!-- Sección Trabajos -->
+        <section id="trabajos" class="section-trabajos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestros Trabajos</h2>
                 </div>
-                <div class="tiempos">
-                    <div class="contenedortiempos">
-                        <img class="svgcards" src="./svgcronometro.svg" alt="">
-                        <h2>Tiempos</h2>
+                <div class="portfolio-grid">
+                    <!-- Proyecto 1 -->
+                     <a href="https://gleamdetail.com.ar">
+                    <div class="project-card">
+                        <div class="card-img" style="background: #e0f7fa;">
+                            <img src="/imggleam.jpg" alt="Proyecto">
+                        </div>
+                        <div class="card-info">
+                            <h3>GleamDetail</h3>
+                            <p>Landing Page</p>
+                        </div>
                     </div>
-                    <p class="pservicios">Según la complejidad del proyecto, normalmente de 1 a 2 semanas.</p>
-                </div>
-                <div class="incluye">
-                    <div class="contenedorincluye">
-                        <img class="svgcards" src="./svgcontenido.svg" alt="">
-                        <h2>¿Que incluye?</h2>
+                    </a>
+                    <!-- Proyecto 2 -->
+                     <a href="https://www.turbolider.com.ar/">
+                    <div class="project-card">
+                        <div class="card-img" style="background: #e8eaf6;">
+                            <img src="/imgturbo.jpg" alt="Proyecto">
+                        </div>
+                        <div class="card-info">
+                            <h3>Turbo Lider</h3>
+                            <p>Landing Page</p>
+                        </div>
                     </div>
-                    <p class="pservicios">Toma de imagenes,video, edicion y revisión.</p>
-                </div>
-</div>
-                
-            <div class="contenedorservicio">
-                <div class="nombredelservicio">
-                    <div style="display: flex;">
-                        <img class="svgcards" src="./svgarchivos.svg" alt="">
-                        <h2 style="text-decoration: underline;">Transcripción de textos y presentaciones</h2>
+                    </a>
+                    <!-- Proyecto 3 -->
+                     
+                    <div class="project-card">
+                        <div class="card-img" style="background: #fbe9e7;">
+                            <img src="/imgpresentacion.jpg" alt="Proyecto">
+                        </div>
+                        <div class="card-info">
+                            <h3>Presentacion(PDF)</h3>
+                            <p>Documento</p>
+                        </div>
                     </div>
-                    <p class="pservicios">Nos encargamos de la transcripción de textos ingles a español y viceversa; creación de presentaciones en PDF o mp4 </p>
-                    <button class="button-30"><a href="https://w.app/jbt49z">Contacto</a></button>
                 </div>
-                <div class="tiempos">
-                    <div class="contenedortiempos">
-                        <img class="svgcards" src="./svgcronometro.svg" alt="">
-                        <h2>Tiempos</h2>
-                    </div>
-                    <p class="pservicios">Según la complejidad del proyecto, normalmente de 1 a 2 semanas.</p>
-                </div>
-                <div class="incluye">
-                    <div class="contenedorincluye">
-                        <img class="svgcards" src="./svgcontenido.svg" alt="">
-                        <h2>¿Que incluye?</h2>
-                    </div>
-                    <p class="pservicios">2 Revisiónes</p>
-                </div>
-                
-
             </div>
-
-        </article>
-        <h1 class="h1servicios">Conocé nuestros casos de éxito</h1>
-            <h2 class="h2servicios">Descubrí cómo ayudamos a cada marca a destacarse en el entorno digital con sitios únicos y de calidad.</h2>
-            
-        <article class="trabajos">
-        
-            <article class="clientes">
-             <div class="step-card">
-  <div class="card-header">
-    <a href="https://gleamdetail.com.ar/"><span class="step-title">Gleamdetail(Mobile)</span></a>
-  </div>
-
-  <div class="card-content-wrapper">
-    <a href="https://gleamdetail.com.ar/"><img src="./imggleam.jpg" alt="Detalle de servicio" class="content-image"></a>
-  </div>
-</div>
-
-
-</article>
-
-
-     <article id="clientes" class="clientes">
-             <div class="step-card">
-  <div class="card-header">
-    <a href="https://drive.google.com/file/d/1GpF3cMvaPSu1bgXbyfJn7JSG6xAwqBAM/view"><span class="step-title">Presentación para proyecto(PDF)</span></a>
-  </div>
-
-  <div class="card-content-wrapper">
-    <a href="https://drive.google.com/file/d/1GpF3cMvaPSu1bgXbyfJn7JSG6xAwqBAM/view"><img src="./imgpresentacion.jpg" alt="Detalle de servicio" class="content-image"></a>
-  </div>
-</div>
-
-
-</article>
-
-<article class="clientes">
-             <div class="step-card">
-  <div class="card-header">
-    <a href="https://www.loditexturbos.com.ar/"><span class="step-title">Loditex Turbos</span></a>
-  </div>
-
-  <div class="card-content-wrapper">
-    <a href="https://www.loditexturbos.com.ar/"><img src="./imgturbo.jpg" alt="Detalle de servicio" class="content-image"></a>
-  </div>
-</div>
-
-
-</article>
-        </article>
-
-
-        </article>
-
-
-
-
-
-
-
-
-
-
+        </section>
     </main>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

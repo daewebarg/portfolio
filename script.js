@@ -1,15 +1,27 @@
-function moveKnob(element, index) {
-  const knob = document.getElementById('knob');
-  
-  // Quitar active de todos y poner al actual
-  document.querySelectorAll('.nav-item').forEach(li => li.classList.remove('active'));
-  element.classList.add('active');
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
 
-  // Calcular movimiento
-  const gap = 5; // El padding del contenedor
-  const position = element.offsetLeft;
-  const width = element.offsetWidth;
+    // Menú móvil
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 
-  knob.style.left = `${position}px`;
-  knob.style.width = `${width}px`;
-}
+    // Cerrar menú al clickear link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
